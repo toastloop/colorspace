@@ -1,0 +1,389 @@
+#possible keybindings
+#https://github.com/leftwm/leftwm/blob/master/src/utils/xkeysym_lookup.rs
+
+#Mod4 = Super key
+modkey = "Mod4"
+mousekey = "Mod4"
+workspaces = []
+tags = ["", "", "", "", "", "", "", "", ""]
+layouts = ["MainAndVertStack", "Fibonacci", "Monocle"]
+
+[[scratchpad]]
+name = "MainTerminal" # This is the name which is referenced when calling (case-sensitive)
+value = "alacritty" # The command to load the application if it isn't started
+
+disable_current_tag_swap = true
+focus_behaviour = "Sloppy"
+focus_new_windows = true
+
+
+
+
+#####################
+##### Key Binds #####
+#####################
+#list of available keys: https://github.com/leftwm/leftwm/blob/main/leftwm-core/src/utils/xkeysym_lookup.rs#L46
+#keybinds for c and = don't work, figgure it out later
+######################################################################
+############################ Function keys ###########################
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "MainTerminal"
+modifier = ["Alt"]
+key = "space"
+
+
+######################################################################
+############################ keyboard row 1 ##########################
+[[keybind]]
+command = "GotoTag"
+value = "1"
+modifier = ["modkey"]
+key = "1"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 1\" \"SendWorkspaceToTag 0 0\""
+modifier = ["modkey", "Shift"]
+key = "1"
+
+[[keybind]]
+command = "GotoTag"
+value = "2"
+modifier = ["modkey"]
+key = "2"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 2\" \"SendWorkspaceToTag 0 1\""
+modifier = ["modkey", "Shift"]
+key = "2"
+
+[[keybind]]
+command = "GotoTag"
+value = "3"
+modifier = ["modkey"]
+key = "3"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 3\" \"SendWorkspaceToTag 0 2\""
+modifier = ["modkey", "Shift"]
+key = "3"
+
+[[keybind]]
+command = "GotoTag"
+value = "4"
+modifier = ["modkey"]
+key = "4"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 4\" \"SendWorkspaceToTag 0 3\""
+modifier = ["modkey", "Shift"]
+key = "4"
+
+[[keybind]]
+command = "GotoTag"
+value = "5"
+modifier = ["modkey"]
+key = "5"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 5\" \"SendWorkspaceToTag 0 4\""
+modifier = ["modkey", "Shift"]
+key = "5"
+
+[[keybind]]
+command = "GotoTag"
+value = "6"
+modifier = ["modkey"]
+key = "6"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 6\" \"SendWorkspaceToTag 0 5\""
+modifier = ["modkey", "Shift"]
+key = "6"
+
+[[keybind]]
+command = "GotoTag"
+value = "7"
+modifier = ["modkey"]
+key = "7"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 7\" \"SendWorkspaceToTag 0 6\""
+modifier = ["modkey", "Shift"]
+key = "7"
+
+[[keybind]]
+command = "GotoTag"
+value = "8"
+modifier = ["modkey"]
+key = "8"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 8\" \"SendWorkspaceToTag 0 7\""
+modifier = ["modkey", "Shift"]
+key = "8"
+
+[[keybind]]
+command = "GotoTag"
+value = "9"
+modifier = ["modkey"]
+key = "9"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command \"SendWindowToTag 9\" \"SendWorkspaceToTag 0 8\""
+modifier = ["modkey", "Shift"]
+key = "9"
+
+[[keybind]]
+command = "Execute"
+value = "sh ~/.config/leftwm/themes/current/scripts/wal.sh"
+modifier = ["modkey"]
+key = "equal"
+
+#0-
+
+######################################################################
+############################ keyboard row 2 ##########################
+[[keybind]]
+command = "FocusNextTag"
+modifier = ["modkey"]
+key = "Tab"
+
+[[keybind]]
+command = "FocusPreviousTag"
+modifier = ["modkey", "Shift"]
+key = "Tab"
+
+[[keybind]]
+command = "FocusNextTag"
+modifier = ["Alt"]
+key = "Tab"
+
+[[keybind]]
+command = "FocusPreviousTag"
+modifier = ["Alt", "Shift"]
+key = "Tab"
+
+[[keybind]]
+command = "CloseWindow"
+modifier = ["modkey", "Shift"]
+key = "q"
+
+[[keybind]]
+command = "CloseWindow"
+modifier = ["modkey"]
+key = "q"
+
+[[keybind]]
+command = "MoveToLastWorkspace"
+modifier = ["modkey", "Shift"]
+key = "w"
+
+[[keybind]]
+command = "SwapTags"
+modifier = ["modkey"]
+key = "w"
+
+# E
+
+[[keybind]]
+command = "SoftReload"
+modifier = ["modkey", "Shift"]
+key = "r"
+
+[[keybind]]
+command = "SetLayout" #like dwm tile
+value = "MainAndVertStack"
+modifier = ["modkey"]
+key = "t"
+
+[[keybind]]
+command = "SetLayout"
+value = "Monocle"
+modifier = ["modkey"]
+key = "y"
+
+[[keybind]]
+command = "SetLayout" 
+value = "Fibonacci"
+modifier = ["modkey"]
+key = "u"
+
+[[keybind]]
+command = "Execute"
+value = "i3lock-fancy -p"
+modifier = ["modkey"]
+key = "i"
+
+#iop[]\
+
+[[keybind]]
+command = "Execute"
+value = "setxkbmap -variant intl"
+modifier = ["modkey"]
+key = "backslash"
+
+[[keybind]]
+command = "Execute"
+value = "setxkbmap -variant euro"
+modifier = ["modkey", "Shift"]
+key = "backslash"
+
+######################################################################
+############################ keyboard row 3 ##########################
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
+
+#g and h should control gaps, not possible :(
+#g
+
+[[keybind]] #goes back to the master one
+command = "FocusWorkspacePrevious"
+modifier = ["modkey", "Shift"]
+key = "h"
+
+[[keybind]]
+command = "FocusWindowDown"
+modifier = ["modkey"]
+key = "j"
+
+[[keybind]]
+command = "MoveWindowDown"
+modifier = ["modkey", "Shift"]
+key = "j"
+
+[[keybind]]
+command = "FocusWindowUp"
+modifier = ["modkey"]
+key = "k"
+
+[[keybind]]
+command = "MoveWindowUp"
+modifier = ["modkey", "Shift"]
+key = "k"
+
+[[keybind]]
+command = "Execute"
+value = "i3lock-fancy -p"
+modifier = ["modkey"]
+key = "l"
+
+[[keybind]]
+command = "FocusWorkspaceNext"
+modifier = ["modkey", "Shift"]
+key = "l"
+
+#;'
+
+
+######################################################################
+############################ keyboard row 4 ##########################
+
+[[keybind]]
+command = "Execute"
+value = "loginctl kill-session $XDG_SESSION_ID"
+modifier = ["modkey", "Shift"]
+key = "x"
+
+#v
+
+[[keybind]]
+command = "Execute"
+value = "polybar-msg cmd toggle"
+modifier = ["modkey"]
+key = "b"
+
+#nm,./
+[[keybind]]
+command = "PreviousLayout"
+modifier = ["modkey"]
+key = "comma"
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey"]
+key = "period"
+
+######################################################################
+############################ keyboard row 5 ##########################
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey"]
+key = "space"
+
+[[keybind]]
+command = "TileToFloating"
+modifier = ["modkey", "Shift"]
+key = "space"
+
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command SwapScreens"
+modifier = ["modkey"]
+key = "Up"
+
+[[keybind]]
+command = "MoveWindowToNextWorkspace"
+modifier = ["modkey","Shift"]
+key = "Up"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command SwapScreens"
+modifier = ["modkey"]
+key = "Down"
+
+[[keybind]]
+command = "MoveWindowToNextWorkspace"
+modifier = ["modkey","Shift"]
+key = "Down"
+
+[[keybind]]
+command = "MoveWindowUp"
+modifier = ["modkey", "Shift"]
+key = "Right"
+
+[[keybind]]
+command = "FocusWindowUp"
+modifier = ["modkey"]
+key = "Right"
+
+[[keybind]]
+command = "MoveWindowDown"
+modifier = ["modkey", "Shift"]
+key = "Left"
+
+[[keybind]]
+command = "FocusWindowDown"
+modifier = ["modkey"]
+key = "Left"
+
+
+# ======= Custom Key Configuration ========
+
+[[keybind]]
+command = "IncreaseMainWidth"
+value = "3"
+modifier = ["modkey", "Shift"]
+key = "Right"
+
+[[keybind]]
+command = "DecreaseMainWidth"
+value = "3"
+modifier = ["modkey", "Shift"]
+key = "Left"
