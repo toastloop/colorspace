@@ -20,7 +20,7 @@ super + Escape
 
 
 super + shift + f
-    org.mozilla.firefox
+    io.gitlab.librewolf-community
 
 super + shift + t
     alacritty -e nnn -dDeQAo
