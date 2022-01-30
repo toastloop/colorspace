@@ -1,4 +1,4 @@
-border_width = 0
+border_width = 1
 margin = [10, 10]
 
 default_border_color = "#2E3440"
