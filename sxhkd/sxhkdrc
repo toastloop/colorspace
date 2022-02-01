@@ -52,6 +52,9 @@ super + shift + d
 super + shift + v
     pavucontrol
 
+super + shift + `
+    bash ~/.config/leftwm/themes/Nord/polybar/scripts/powermenu.sh
+
 #################################################################
 # CONTROL + ALT KEYS
 #################################################################
