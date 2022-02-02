@@ -9,8 +9,8 @@ fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # Set Wallpaper
-wal -i $SCRIPTPATH/backgrounds/1586853730_nord-peeks.png
-
+feh --bg-scale ~/Projects/leftwm-nord/backgrounds/1586853730_nord-peeks.png
+wal --theme base16-nord
 # keybindings daemon
 if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc" ] ; then
   # check if there is a keybinds-folder inside your personal theme and use it
