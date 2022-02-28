@@ -22,7 +22,7 @@ else
 fi  
 
 # Start Network Manager Applet
-nm-applet &
+# nm-applet &
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
