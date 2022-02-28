@@ -26,7 +26,7 @@ fi
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
-  picom --config "$SCRIPTPATH"/picom_mine.conf &> /dev/null &
+  picom --config "$SCRIPTPATH"/picom.conf &> /dev/null &
 elif [ -x "$(command -v compton)" ]; then
   compton --config $HOME/.config/leftwm/themes/current/compton.conf &> /dev/null &
 fi
