@@ -16,7 +16,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 - [Pywal](https://github.com/dylanaraps/pywal)
 - [Feh](https://github.com/derf/feh)
 - [Sxhkd](https://github.com/baskerville/sxhkd)
-- [i3lock-fancy-multimonitor](https://github.com/guimeira/i3lock-fancy-multimonitor)
+- [i3lock-fancy-dualmonitors](https://aur.archlinux.org/packages/i3lock-fancy-dualmonitors-git)
 - [playerctl](https://github.com/altdesktop/playerctl)
 - [NerdFonts](https://www.nerdfonts.com/)
 
@@ -34,7 +34,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 
 1. Run 
 ```shell
-paru -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-multimonitor playerctl
+paru -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
 ``` 
 (will also work with `yay` or another aur helper)
 
