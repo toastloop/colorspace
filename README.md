@@ -33,7 +33,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 ## Install
 
 1. Run 
-```shell
+```bash
 paru --needed -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
 ``` 
 (will also work with `yay` or another aur helper)
@@ -46,7 +46,7 @@ name = "toastloop"
 definitions_version = 0
 ```
 3. Finally, run
-```shell
+```bash
 leftism-theme update && leftwm-theme apply RustyGlass
 ```
 
