@@ -6,7 +6,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 
 Programs:
 
-- (Required)
+(Required)
 - [LeftWM](https://github.com/leftwm/leftwm)
 - [Polybar](https://github.com/polybar/polybar)
 - [Rofi](https://github.com/davatorium/rofi)
@@ -18,7 +18,7 @@ Programs:
 - [i3lock-fancy-multimonitor](https://github.com/guimeira/i3lock-fancy-multimonitor)
 - [playerctl](https://github.com/altdesktop/playerctl)
 
-- (Optional)
+(Optional)
 - [Fish Shell](https://fishshell.com/)
 - [Starship Prompt](https://starship.rs/)
 - [Macchina](https://github.com/macchina-cli/macchina)
@@ -29,7 +29,7 @@ Programs:
 
 To Install:
 
-1. Run `sudo paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl`
+1. Run `sudo paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl` (will also work with yay or another aur helper).
 2. Add the following to your leftwm `themes.conf` 
 ```ini
 [[repos]]
