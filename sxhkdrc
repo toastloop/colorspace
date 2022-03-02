@@ -47,13 +47,13 @@ super + shift + b
     com.bitwarden.desktop
 
 super + shift + d
-    bash ~/.config/leftwm/themes/current/polybar/scripts/launcher.sh
+    bash ~/.config/leftwm/themes/current/rofi/launcher.sh
 
 super + shift + v
     pavucontrol
 
 super + shift + grave
-    bash ~/.config/leftwm/themes/current/polybar/scripts/power.sh
+    bash ~/.config/leftwm/themes/current/rofi/power.sh
 
 #################################################################
 # CONTROL + ALT KEYS
@@ -95,7 +95,11 @@ super + shift + grave
 
 #Picom Toggle
 ctrl + alt + o
-    ~/.config/leftwm/themes/current/scripts/picom-toggle.sh
+    ~/.config/leftwm/themes/current/picom.sh
+
+#Lock Screen
+ctrl + alt + l
+    i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
 
 #################################################################
 # SUPER + KEYS

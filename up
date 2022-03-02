@@ -13,23 +13,13 @@ feh --bg-scale $SCRIPTPATH/backgrounds/ign_unsplash1.png
 #feh --bg-scale --randomize "$SCRIPTPATH/backgrounds/*"
 wal --theme base16-nord
 # keybindings daemon
-if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc" ] ; then
-  # check if there is a keybinds-folder inside your personal theme and use it
-  sxhkd -c  $SCRIPTPATH/sxhkd/sxhkdrc &
-else
-  # standard keybinds
-  sxhkd -c  ~/.config/leftwm/sxhkd/sxhkdrc &
-fi  
+sxhkd -c  $SCRIPTPATH/sxhkdrc &
 
 # Start Network Manager Applet
 nm-applet &
 
 # Boot picom or compton if it exists
-if [ -x "$(command -v picom)" ]; then
-  picom --config "$SCRIPTPATH"/picom.conf &> /dev/null &
-elif [ -x "$(command -v compton)" ]; then
-  compton --config $HOME/.config/leftwm/themes/current/compton.conf &> /dev/null &
-fi
+picom --config "$SCRIPTPATH"/picom.conf &> /dev/null &
 
 #Set the theme.toml config
 echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
@@ -40,6 +30,6 @@ monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar.config $barname &> /dev/null &
   let index=index+1
 done

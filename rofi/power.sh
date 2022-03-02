@@ -2,7 +2,7 @@
 
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-THEME="$SCRIPTPATH/rofi/power.rasi"
+THEME="$SCRIPTPATH/power.rasi"
 
 rofi_command="rofi -no-config -theme $THEME"
 
@@ -25,7 +25,7 @@ case $chosen in
 		systemctl reboot
         ;;
     $lock)
-        i3lock-fancy-dualmonitor  -pg -f Noto-Mono-Nerd-Font-Complete
+        i3lock-fancy-dualmonitor -f Noto-Mono-Nerd-Font-Complete
         ;;
     $suspend)
 		systemctl suspend
