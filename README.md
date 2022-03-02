@@ -46,4 +46,6 @@ definitions_version = 0
 
 Credits:
 
-- Based on the leftwm-theme from 
+- Based on the [leftwm-theme-main](https://github.com/AnthonyMichaelTDM/leftwm-theme-main) by [AnthonyMichael](https://github.com/AnthonyMichaelTDM/).
+- Wallpaper from the wonderful [lambda-wallpapers](https://github.com/pagankeymaster/lambda-wallpapers) collection by [PaganKeyMaster](https://github.com/pagankeymaster/).
+- Rofi theme from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
