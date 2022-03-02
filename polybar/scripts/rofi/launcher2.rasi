@@ -17,9 +17,14 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-@import "colors.rasi"
-
 * {
+  al:   #2e344000;
+  bg:   #2e3440FF;
+  bga:  #3b4252FF;
+  bar:  #1F1F1FFF;
+  fg:   #3b4252FF;
+  ac:   #b48eadFF;
+  sa:   #3b425299;
   background-color: @al;
   text-color: #88C0D0;
 }
@@ -27,7 +32,7 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               #3B4252EE;
+    background-color:               #2e3440EE;
     text-color:                     #88C0D0;
 	border:							0px;
 	border-color:					@ac;

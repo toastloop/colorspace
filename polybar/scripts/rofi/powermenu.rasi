@@ -8,10 +8,10 @@ configuration {
 
 * {
     font: "SauceCodePro Nerd Font Semibold 11";
-    foreground:                 #8FBCBB;
-    background-color:           #3B4252;
-    selected-foreground:        #3B4252;
-    selected-background:        #5E81AC;
+    foreground:                 #81a1c1;
+    background-color:           #2e3440;
+    selected-foreground:        #b48ead;
+    selected-background:        #3b425299;
     separatorcolor:             #ff79c6;
     bordercolor:                #ff79c6;
     highlightcolor:             #8be9fd;
