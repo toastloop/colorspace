@@ -37,6 +37,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 paru -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-multimonitor playerctl
 ``` 
 (will also work with yay or another aur helper)
+
 2. Add the following to your leftwm `themes.conf` 
 ```ini
 [[repos]]
