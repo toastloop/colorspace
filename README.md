@@ -37,4 +37,4 @@ url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
 name = "toastloop"
 definitions_version = 0
 ```
-3. Run `leftism-theme update` then `leftwm-theme apply Nord`
+3. Run `leftism-theme update` then `leftwm-theme apply RustyGlass`
