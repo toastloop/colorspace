@@ -4,7 +4,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 
 ![Screenshot](https://raw.githubusercontent.com/toastloop/leftwm-nord/master/desktop.jpg)
 
-Programs:
+## Dependencies
 
 (Required)
 - [LeftWM](https://github.com/leftwm/leftwm)
@@ -28,7 +28,7 @@ Programs:
 - [Nordic GTK Theme](https://github.com/EliverLara/Nordic)
 
 
-To Install:
+## Install
 
 1. Run `paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl` 
 
@@ -44,7 +44,7 @@ definitions_version = 0
 3. Run `leftism-theme update` then `leftwm-theme apply RustyGlass`
 
 
-Credits:
+## Credits
 
 - Based on the [leftwm-theme-main](https://github.com/AnthonyMichaelTDM/leftwm-theme-main) by [AnthonyMichael](https://github.com/AnthonyMichaelTDM/).
 - Wallpaper from the wonderful [lambda-wallpapers](https://github.com/pagankeymaster/lambda-wallpapers) collection by [PaganKeyMaster](https://github.com/pagankeymaster/).
