@@ -29,7 +29,7 @@ Programs:
 
 To Install:
 
-1. Run `sudo paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl` (will also work with yay or another aur helper).
+1. Run `paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl` (will also work with yay or another aur helper).
 2. Add the following to your leftwm `themes.conf` 
 ```ini
 [[repos]]
