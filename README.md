@@ -7,6 +7,7 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 ## Dependencies
 
 (Required)
+
 - [LeftWM](https://github.com/leftwm/leftwm)
 - [Polybar](https://github.com/polybar/polybar)
 - [Rofi](https://github.com/davatorium/rofi)
@@ -17,8 +18,10 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 - [Sxhkd](https://github.com/baskerville/sxhkd)
 - [i3lock-fancy-multimonitor](https://github.com/guimeira/i3lock-fancy-multimonitor)
 - [playerctl](https://github.com/altdesktop/playerctl)
+- [NerdFonts](https://www.nerdfonts.com/)
 
 (Optional)
+
 - [Fish Shell](https://fishshell.com/)
 - [Starship Prompt](https://starship.rs/)
 - [Macchina](https://github.com/macchina-cli/macchina)
@@ -27,13 +30,13 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 - [Cava](https://github.com/karlstav/cava)
 - [Nordic GTK Theme](https://github.com/EliverLara/Nordic)
 
-
 ## Install
 
-1. Run `paru -S leftwm alacritty rofi feh sxhkd python-pywal i3lock-fancy-multimonitor playerctl` 
-
-    (will also work with yay or another aur helper)
-
+1. Run 
+```shell
+paru -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-multimonitor playerctl
+``` 
+(will also work with yay or another aur helper)
 2. Add the following to your leftwm `themes.conf` 
 ```ini
 [[repos]]
@@ -41,7 +44,10 @@ url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
 name = "toastloop"
 definitions_version = 0
 ```
-3. Run `leftism-theme update` then `leftwm-theme apply RustyGlass`
+3. Finally, run
+```shell
+leftism-theme update && leftwm-theme apply RustyGlass
+```
 
 
 ## Credits
