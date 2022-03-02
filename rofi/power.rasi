@@ -8,10 +8,10 @@ configuration {
 
 * {
     font: "SauceCodePro Nerd Font Semibold 11";
-    foreground:                 #81a1c1;
-    background-color:           #2e3440;
-    selected-foreground:        #b48ead;
-    selected-background:        #3b425299;
+    foreground:                 #E4E4E4;
+    background-color:           #1c1b2255;
+    selected-foreground:        #E4E4E4;
+    selected-background:        #11112277;
     separatorcolor:             #ff79c6;
     bordercolor:                #ff79c6;
     highlightcolor:             #8be9fd;
@@ -19,6 +19,7 @@ configuration {
 }
 
 #window {
+	transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
 	border:							0;
@@ -26,8 +27,8 @@ configuration {
     border-radius:                  8;
 	width:							300px;
     location:                       northeast;
-    x-offset:                       -8;
-    y-offset:                       50;
+    x-offset:                       -12;
+    y-offset:                       55;
 }
 
 #listview {

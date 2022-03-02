@@ -5,11 +5,11 @@
 %{A}
 {% elsif tag.visible  %}
 %{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
-%{T1} %{F#ebcb8b}{{tag.name}} %{F-}
+%{T1} %{F#b48ead}{{tag.name}} %{F-}
 %{A}
 {% elsif tag.busy  %}
 %{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
-%{T1} %{F#b48ead}{{tag.name}} %{F-}
+%{T1} %{F#8fbcbb}{{tag.name}} %{F-}
 %{A}
 {% else tag.visible  %}
 %{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
