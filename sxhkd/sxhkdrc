@@ -47,13 +47,13 @@ super + shift + b
     com.bitwarden.desktop
 
 super + shift + d
-    bash ~/.config/leftwm/themes/Nord/polybar/scripts/launcher.sh
+    bash ~/.config/leftwm/themes/current/polybar/scripts/launcher.sh
 
 super + shift + v
     pavucontrol
 
 super + shift + grave
-    bash ~/.config/leftwm/themes/Nord/polybar/scripts/powermenu.sh
+    bash ~/.config/leftwm/themes/current/polybar/scripts/power.sh
 
 #################################################################
 # CONTROL + ALT KEYS

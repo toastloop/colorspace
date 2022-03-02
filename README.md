@@ -1,3 +1,3 @@
-# leftwm-nord
+# Rusty Glass
 
-Nord styled theme for LeftWM
+Nord and glass styled theme for LeftWM

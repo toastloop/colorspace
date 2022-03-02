@@ -4,18 +4,19 @@
 #Mod4 = Super key
 modkey = "Mod4"
 mousekey = "Mod4"
-workspaces = []
+workspaces = [
+    { y = 0, x = 0, height = 1440, width = 2560 },
+    { y = 0, x = 2560, height = 1440, width = 2560 },
+]
 tags = ["", "", "", "", "", "", "", "", ""]
-layouts = ["MainAndVertStack", "Fibonacci", "Monocle"]
-
-[[scratchpad]]
-name = "MainTerminal" # This is the name which is referenced when calling (case-sensitive)
-value = "alacritty" # The command to load the application if it isn't started
-
+layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
 
+[[scratchpad]]
+name = "MainTerminal"
+value = "alacritty"
 
 
 

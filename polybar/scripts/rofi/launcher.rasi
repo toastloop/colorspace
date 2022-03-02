@@ -12,7 +12,7 @@ configuration {
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                true;
-    fullscreen:                     false;
+    fullscreen:                     true;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
@@ -37,23 +37,25 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  30px;
-    height:                         90%;
-	width:							96%;
+    height:                         100%;
+	width:							100%;
     location:                       northwest;
-    x-offset:                        2%;
-    y-offset:                        5%;
+    x-offset:                        0%;
+    y-offset:                        0%;
+    padding:                        30px;
 }
 
 
 entry {
     background-color:               #3B4252;
-    text-color:                     #5E81AC;
+    text-color:                     #88C0D0;
     expand:                         false;
     horizontal-align:               50%;
     placeholder:                    "Type to search";
-    margin:                         0% 0% 0% 37%;
+    margin:                         0% 0% 0% 40%;
     padding:                        1.5% 5.5%;
     blink:                          true;
+    border-radius: 10px;
 }
 
 inputbar {

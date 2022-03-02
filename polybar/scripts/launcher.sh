@@ -5,4 +5,4 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/leftwm/themes/current/polybar/scripts/rofi/launcher2.rasi
+rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/leftwm/themes/current/polybar/scripts/rofi/launcher.rasi
