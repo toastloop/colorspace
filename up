@@ -9,7 +9,7 @@ fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # Set Wallpaper
-feh --bg-scale $SCRIPTPATH/backgrounds/ign_sunAndClouds.png
+feh --bg-scale $SCRIPTPATH/backgrounds/ign_unsplash1.png
 #feh --bg-scale --randomize "$SCRIPTPATH/backgrounds/*"
 wal --theme base16-nord
 # keybindings daemon
@@ -22,7 +22,7 @@ else
 fi  
 
 # Start Network Manager Applet
-# nm-applet &
+nm-applet &
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
