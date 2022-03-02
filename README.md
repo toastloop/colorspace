@@ -25,6 +25,7 @@ Programs:
 - [Spotify-tui](https://github.com/Rigellute/spotify-tui) (w/ [Spotifyd](https://github.com/Spotifyd/spotifyd))
 - [Sptlrx](https://github.com/raitonoberu/sptlrx)
 - [Cava](https://github.com/karlstav/cava)
+- [Nordic GTK Theme](https://github.com/EliverLara/Nordic)
 
 
 To Install:
@@ -41,3 +42,8 @@ name = "toastloop"
 definitions_version = 0
 ```
 3. Run `leftism-theme update` then `leftwm-theme apply RustyGlass`
+
+
+Credits:
+
+- Based on the leftwm-theme from 
