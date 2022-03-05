@@ -8,8 +8,8 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 ## 💕 Features
 
 - Rounded Corners
-- Glass Blur  (using dual_kawase blur)
-- Spotify Currently Playing (using playerctl)
+- Glass Blur
+- Spotify Currently Playing
 - Customized Rofi Launcher
 - Built with Rust first.
 
