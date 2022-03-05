@@ -67,4 +67,4 @@ leftism-theme update && leftwm-theme apply RustyGlass
 - Rofi theme from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
 - README inspired by [awesome-shell](https://github.com/Mofiqul/awesome-shell/) README.
 
-## 🏳️‍🌈 Proud LGBT Creator
+### 🏳️‍🌈 Proud LGBT Creator
