@@ -5,6 +5,14 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 ![Screenshot](https://raw.githubusercontent.com/toastloop/rustyglass/master/desktop.jpg)
 ![Screenshot2](https://raw.githubusercontent.com/toastloop/rustyglass/master/desktop2.jpg)
 
+## 💕 Features
+
+- Rounded Corners
+- Glass Blur  (using dual_kawase blur)
+- Spotify Currently Playing (using playerctl)
+- Customized Rofi Launcher
+- Built with Rust first.
+
 ## ⚒️ Dependencies
 
 (Required)
@@ -30,14 +38,6 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 - [Sptlrx](https://github.com/raitonoberu/sptlrx)
 - [Cava](https://github.com/karlstav/cava)
 - [Nordic GTK Theme](https://github.com/EliverLara/Nordic)
-
-## 💕 Features
-
-- Rounded Corners
-- Glass Blur  (using dual_kawase blur)
-- Spotify Currently Playing (using playerctl)
-- Customized Rofi Launcher
-- Built with Rust first.
 
 ## ⬇️ Install
 
