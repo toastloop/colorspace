@@ -9,9 +9,12 @@ fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # Set Wallpaper
-if [ -x "$(command -v feh)" ]; then
+if [ -f ~/.fehbg ]; then
+  ~/.fehbg
+elif [ -x "$(command -v feh)" ]; then
   feh --bg-scale $SCRIPTPATH/backgrounds/ign-whale-dark.png
 fi
+
 # Set Global Color Scheme
 if [ -x "$(command -v wal)" ]; then
   wal --theme base16-nord
