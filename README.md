@@ -31,6 +31,14 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 - [Cava](https://github.com/karlstav/cava)
 - [Nordic GTK Theme](https://github.com/EliverLara/Nordic)
 
+## 💕 Features
+
+- Rounded Corners
+- Glass Blur  (using dual_kawase blur)
+- Spotify Currently Playing (using playerctl)
+- Customized Rofi Launcher
+- Built with Rust first.
+
 ## ⬇️ Install
 
 1. Run 
@@ -57,5 +65,6 @@ leftism-theme update && leftwm-theme apply RustyGlass
 - Based on the [leftwm-theme-main](https://github.com/AnthonyMichaelTDM/leftwm-theme-main) by [AnthonyMichael](https://github.com/AnthonyMichaelTDM/).
 - Wallpaper from the wonderful [lambda-wallpapers](https://github.com/pagankeymaster/lambda-wallpapers) collection by [PaganKeyMaster](https://github.com/pagankeymaster/).
 - Rofi theme from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
+- README inspired by [awesome-shell](https://github.com/Mofiqul/awesome-shell/) README.
 
 🏳️‍🌈 Proud LGBT Creator
