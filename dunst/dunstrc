@@ -55,4 +55,4 @@ timeout = 20
 
 [sound]
     summary = "*"
-    script = ~/.config/leftwm/themes/current/dunst_sound.sh
+    script = ~/.config/leftwm/themes/current/dunst/sound.sh
