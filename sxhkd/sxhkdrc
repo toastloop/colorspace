@@ -95,11 +95,23 @@ super + shift + grave
 
 #Picom Toggle
 ctrl + alt + o
-    ~/.config/leftwm/themes/current/picom.sh
+    ~/.config/leftwm/themes/current/picom/picom.sh
 
 #Lock Screen
 ctrl + alt + l
     i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
+
+#Dunst
+ctrl + alt + shift + o
+    dunstctl rule sound toggle
+ctrl + alt + shift + p
+    dunstctl set-paused toggle
+ctrl + alt + shift + h
+    dunstctl history-pop
+ctrl + alt + shift + c
+    dunstctl close
+ctrl + alt + shift + a
+    dunstctl close-all
 
 #################################################################
 # SUPER + KEYS

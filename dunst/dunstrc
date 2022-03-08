@@ -1,0 +1,58 @@
+[global]
+font = "NotoSansMono 11"
+markup = yes
+format = "<b>%s</b>\n%b"
+sort = no
+indicate_hidden = yes
+alignment = center
+show_age_threshold = -1
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = no
+hide_duplicate_count = no
+width = "(250,350)"
+height = "(0,50)"
+offset = "20x40"
+origin = "bottom-right"
+shrink = no
+transparency = 20
+idle_threshold = 360
+monitor = 0
+follow = none
+sticky_history = yes
+history_length = 15
+show_indicators = no
+line_height = 3
+separator_height = 0
+padding = 6
+horizontal_padding = 6
+separator_color = "#5e81ac"
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/firefox -new-tab
+icon_position = left
+max_icon_size = 64 
+icon_path = /usr/share/icons/Nordzy-dark/mimes/22/:/usr/share/icons/Nordzy-dark/status/22/:/usr/share/icons/Nordzy-dark/devices/22/:/usr/share/icons/Nordzy-dark/status/22/:/usr/share/icons/Nordzy-dark/emblems/22/:/usr/share/icons/Nordzy-dark/actions/22/:/usr/share/icons/Nordzy-dark/apps/scalable/
+frame_width = 0
+frame_color = "#88c0d0"
+
+[urgency_low]
+frame_color = "#88c0d0"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 10
+
+[urgency_normal]
+frame_color = "#5e81ac"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 15
+
+[urgency_critical]
+frame_color = "#bf616a"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 20
+
+[sound]
+    summary = "*"
+    script = ~/.config/leftwm/themes/current/dunst_sound.sh

@@ -28,7 +28,7 @@ configuration {
 	width:							300px;
     location:                       northeast;
     x-offset:                       -12;
-    y-offset:                       55;
+    y-offset:                       70;
 }
 
 #listview {

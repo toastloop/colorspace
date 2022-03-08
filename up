@@ -12,7 +12,7 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 if [ -f ~/.fehbg ]; then
   ~/.fehbg
 elif [ -x "$(command -v feh)" ]; then
-  feh --bg-scale $SCRIPTPATH/backgrounds/ign-whale-dark.png
+  feh --bg-scale $SCRIPTPATH/backgrounds/ign_outer_space.png
 fi
 
 # Set Global Color Scheme
@@ -21,7 +21,7 @@ if [ -x "$(command -v wal)" ]; then
 fi
 # Launch Keybindings Daemon
 if [ -x "$(command -v sxhkd)" ]; then
-  sxhkd -c  $SCRIPTPATH/sxhkdrc &
+  sxhkd -c  $SCRIPTPATH/sxhkd/sxhkdrc &
 fi
 
 # Start Network Manager Applet
@@ -31,18 +31,23 @@ fi
 
 # Boot picom if it exists
 if [ -x "$(command -v picom)" ]; then
-  picom --config "$SCRIPTPATH"/picom.conf &> /dev/null &
+  picom --config "$SCRIPTPATH"/picom/picom.conf &> /dev/null &
+fi
+
+# Boot dunst if it exists
+if [ -x "$(command -v dunst)" ]; then
+  dunst -config "$SCRIPTPATH"/dunst/dunstrc &> /dev/null &
 fi
 
 #Set the theme.toml config
-echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+echo "LoadTheme $SCRIPTPATH/leftwm/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
 
 #Start Polybar
 index=0
 monitors=($(polybar -m | sed s/:.*//))
-leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
+leftwm-state -q -n -t "$SCRIPTPATH"/leftwm/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
   let index=index+1
 done
