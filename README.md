@@ -44,24 +44,24 @@ Nord and powerline styled theme for LeftWM using mostly Rust software.
 
 1. Run the following command (will also work with `yay` or another aur helper)
 
-```bash
-paru --needed -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
-```
+    ```bash
+    paru --needed -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
+    ```
 
 2. Add the following to `~/.config/leftwm/themes.conf`
 
-```ini
-[[repos]]
-url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
-name = "toastloop"
-definitions_version = 0
-```
+    ```ini
+    [[repos]]
+    url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
+    name = "toastloop"
+    definitions_version = 0
+    ```
 
 3. Finally, run
 
-```bash
-leftwm-theme update && leftwm-theme apply ColorSpace
-```
+    ```bash
+    leftwm-theme update && leftwm-theme apply ColorSpace
+    ```
 
 ## 📝 Credits
 
