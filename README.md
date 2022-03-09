@@ -1,17 +1,18 @@
-# 💻 Rusty Glass
+# 💻 ColorSpace
 
-Nord and glass styled theme for LeftWM using mostly Rust software.
+Nord and powerline styled theme for LeftWM using mostly Rust software.
 
 ![Screenshot](https://raw.githubusercontent.com/toastloop/rustyglass/master/desktop.jpg)
 ![Screenshot2](https://raw.githubusercontent.com/toastloop/rustyglass/master/desktop2.jpg)
 
 ## 💕 Features
 
+- Powerline polybar configuration
 - Rounded Corners
-- Glass Blur
+- Kwase Blur
 - Spotify Currently Playing
 - Customized Rofi Launcher
-- Built with Rust first.
+- Built with Rust first
 
 ## ⚒️ Dependencies
 
@@ -41,29 +42,31 @@ Nord and glass styled theme for LeftWM using mostly Rust software.
 
 ## ⬇️ Install
 
-1. Run 
+1. Run the following command (will also work with `yay` or another aur helper)
+
 ```bash
 paru --needed -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
-``` 
-(will also work with `yay` or another aur helper)
+```
 
-2. Add the following to `~/.config/leftwm/themes.conf` 
+2. Add the following to `~/.config/leftwm/themes.conf`
+
 ```ini
 [[repos]]
 url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
 name = "toastloop"
 definitions_version = 0
 ```
-3. Finally, run
-```bash
-leftism-theme update && leftwm-theme apply RustyGlass
-```
 
+3. Finally, run
+
+```bash
+leftwm-theme update && leftwm-theme apply ColorSpace
+```
 
 ## 📝 Credits
 
 - Based on the [leftwm-theme-main](https://github.com/AnthonyMichaelTDM/leftwm-theme-main) by [AnthonyMichael](https://github.com/AnthonyMichaelTDM/).
-- Wallpaper from the wonderful [lambda-wallpapers](https://github.com/pagankeymaster/lambda-wallpapers) collection by [PaganKeyMaster](https://github.com/pagankeymaster/).
+- Wallpaper from the [nordic-wallpapers](https://github.com/linuxdotexe/nordic-wallpapers) collection by [Sai Nivas](https://github.com/linuxdotexe).
 - Rofi theme from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
 - README inspired by the [awesome-shell](https://github.com/Mofiqul/awesome-shell/) README.
 
