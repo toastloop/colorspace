@@ -2,6 +2,7 @@
 
 Nord and powerline styled theme for LeftWM using mostly Rust software.
 
+![Background](https://raw.githubusercontent.com/toastloop/colorspace/master/assets/background.jpg)
 ![Screenshot](https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop.jpg)
 ![Screenshot2](https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop2.jpg)
 
