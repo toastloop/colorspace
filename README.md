@@ -67,8 +67,8 @@ Nord and powerline styled theme for LeftWM using mostly Rust software.
 ## 📝 Credits
 
 - Based on the [leftwm-theme-main](https://github.com/AnthonyMichaelTDM/leftwm-theme-main) by [AnthonyMichael](https://github.com/AnthonyMichaelTDM/).
-- Wallpaper from the [nordic-wallpapers](https://github.com/linuxdotexe/nordic-wallpapers) collection by [Sai Nivas](https://github.com/linuxdotexe).
-- Rofi theme from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
-- README inspired by the [awesome-shell](https://github.com/Mofiqul/awesome-shell/) README.
+- [Wallpaper](https://github.com/linuxdotexe/nordic-wallpapers/blob/master/wallpapers/ign_outer_space.png) from the [nordic-wallpapers](https://github.com/linuxdotexe/nordic-wallpapers) collection by [Sai Nivas](https://github.com/linuxdotexe).
+- [Rofi theme](https://github.com/ishaan26/config_files/blob/master/linux/.config/rofi/themes/drun.rasi) from the [config files](https://github.com/ishaan26/config_files) of [ishaan26](https://github.com/ishaan26/).
+- README inspired by the [README](https://github.com/Mofiqul/awesome-shell/blob/main/README.md) of [awesome-shell](https://github.com/Mofiqul/awesome-shell/).
 
 ### 🏳️‍🌈 Proud LGBT Creator
