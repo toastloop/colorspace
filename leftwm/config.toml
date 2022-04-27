@@ -355,19 +355,9 @@ modifier = ["modkey","Shift"]
 key = "Down"
 
 [[keybind]]
-command = "MoveWindowUp"
-modifier = ["modkey", "Shift"]
-key = "Right"
-
-[[keybind]]
 command = "FocusWindowUp"
 modifier = ["modkey"]
 key = "Right"
-
-[[keybind]]
-command = "MoveWindowDown"
-modifier = ["modkey", "Shift"]
-key = "Left"
 
 [[keybind]]
 command = "FocusWindowDown"
