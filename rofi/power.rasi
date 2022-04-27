@@ -27,8 +27,8 @@ configuration {
     border-radius:                  8;
 	width:							300px;
     location:                       northeast;
-    x-offset:                       -12;
-    y-offset:                       70;
+    x-offset:                       -20;
+    y-offset:                       80;
 }
 
 #listview {
