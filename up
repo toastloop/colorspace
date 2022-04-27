@@ -29,6 +29,11 @@ if [ -x "$(command -v nm-applet)" ]; then
   nm-applet &
 fi
 
+# Boot dunst if it exists
+if [ -x "$(command -v copyq)" ]; then
+  copyq &
+fi
+
 # Boot picom if it exists
 if [ -x "$(command -v picom)" ]; then
   picom --config "$SCRIPTPATH"/picom/picom.conf &> /dev/null &
@@ -40,7 +45,7 @@ if [ -x "$(command -v dunst)" ]; then
 fi
 
 #Set the theme.toml config
-echo "LoadTheme $SCRIPTPATH/leftwm/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/command-0.pipe
 
 #Start Polybar
 index=0
