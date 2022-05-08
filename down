@@ -14,3 +14,4 @@ pkill picom
 pkill dunst
 pkill sxhkd
 pkill nm-applet
+pkill copyq
