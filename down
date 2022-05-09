@@ -9,9 +9,10 @@ fi
 
 echo "UnloadTheme" > $XDG_RUNTIME_DIR/leftwm/command-0.pipe
 
+pkill copyq
+pkill flameshot
+pkill dunst
 pkill polybar
 pkill picom
-pkill dunst
 pkill sxhkd
 pkill nm-applet
-pkill copyq

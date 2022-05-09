@@ -29,9 +29,14 @@ if [ -x "$(command -v nm-applet)" ]; then
   nm-applet &
 fi
 
-# Boot dunst if it exists
+# Boot copyq if it exists
 if [ -x "$(command -v copyq)" ]; then
   copyq &
+fi
+
+# Boot flameshot if it exists
+if [ -x "$(command -v dunst)" ]; then
+  flameshot &> /dev/null &
 fi
 
 # Boot picom if it exists
