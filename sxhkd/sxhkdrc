@@ -1,142 +1,115 @@
 #################################################################
 # KEYBOARD BINDINGS FOR ANY TWM
 #################################################################
+# https://wiki.linuxquestions.org/wiki/List_of_keysyms
 
-#################################################################
-# SUPER + FUNCTION KEYS
-#################################################################
-
-#################################################################
-# SUPER + ... KEYS
-#################################################################
-
-#Xkill
 super + Escape
     xkill
-
-#################################################################
-# SUPER + SHIFT KEYS
-#################################################################
-
-
-super + shift + f
-    io.gitlab.librewolf-community
-
+super + grave
+    bash ~/.config/leftwm/themes/current/rofi/power.sh
+super + shift + {1-9}
+    leftwm-command "SendWindowToTag {1-9}"
+#super + {0-9}
+#    leftwm-command "SendWorkspaceToTag 0 {0-9}"
+super + alt + {0-9}
+    leftwm-command "SendWorkspaceToTag 1 {0-9}"
+super + Tab
+    leftwm-command "FocusNextTag"
+super + shift + Tab
+    leftwm-command "FocusPreviousTag"
+alt + Tab
+    leftwm-command "FocusNextTag"
+alt + shift + Tab
+    leftwm-command "FocusPreviousTag"
+super + shift + equal
+    wal --theme base16-nord
+super + q
+    leftwm-command "CloseWindow"
+super + shift + q
+    leftwm-command "CloseWindow"
+super + w
+    leftwm-command "SwapScreens"
+super + shift + w
+    leftwm-command "MoveToLastWorkspace"
+super + shift + r
+    leftwm-command "SoftReload"
+super + t
+    leftwm-command "SetLayout MainAndVertStack"
 super + shift + t
-    alacritty -e nnn -dDeQAo
-
+    bash ~/.config/leftwm/themes/current/rofi/file.sh
+super + y
+    leftwm-command "SetLayout Monocle"
+super + u
+    leftwm-command "SetLayout Fibonacci"
+super + i
+    dunstctl rule sound toggle
+super + o
+    dunstctl set-paused toggle
+super + p
+    ~/.config/leftwm/themes/current/picom/picom.sh
+super + bracketleft
+    dunstctl history-pop
+super + bracketright
+    dunstctl close
+super + backslash
+    dunstctl close-all
 super + shift + a
     alacritty
-
-super + shift + c
-    com.visualstudio.code-oss
-
-super + shift + z
-    alacritty -e "nvim"
-
-super + shift + y
-    alacritty -e "btm"
-
-super + shift + e
-    alacritty -e "ncspot"
-
-super + shift + g
-    com.discordapp.Discord
-
-super + shift + b
-    com.bitwarden.desktop
-
-super + shift + d
-    bash ~/.config/leftwm/themes/current/rofi/drun.sh
-
+super + shift + s
+    io.gitlab.librewolf-community
+super + f
+    leftwm-command "ToggleFullScreen"
+super + shift + f
+    leftwm-command "ToggleFloating"
+super + h
+    leftwm-command "FocusWorkspacePrevious"
+super + shift + h
+    leftwm-command "MoveToLastWorkspace"
+super + j
+    leftwm-command "FocusWindowDown"
+super + shift + j
+    leftwm-command "MoveWindowDown"
+super + k
+    leftwm-command "FocusWindowUp"
+super + shift + k
+    leftwm-command "MoveWindowUp"
+super + alt + k
+    pkill sxhkd && sxhkd -c  ~/.config/leftwm/themes/current/sxhkd/sxhkdrc && notify-send "SXHKD" "Reloaded sxhkd"
+super + l
+    leftwm-command "FocusWorkspaceNext"
+super + shift + l
+    leftwm-command "MoveWindowToNextWorkspace"
+super + alt + l
+    i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
+super + shift + x
+    loginctl kill-session $XDG_SESSION_ID
 super + shift + v
     pavucontrol
-
-super + shift + grave
-    bash ~/.config/leftwm/themes/current/rofi/power.sh
-
-#################################################################
-# CONTROL + ALT KEYS
-#################################################################
-
-#################################################################
-# ALT + ... KEYS
-#################################################################
-
-#################################################################
-#VARIETY KEYS WITH PYWAL
-#################################################################
-
-#################################################################
-# CONTROL + SHIFT KEYS
-#################################################################
-
-#################################################################
-#     SCREENSHOTS
-#################################################################
-
-#################################################################
-#     FUNCTION KEYS
-#################################################################
-
-#################################################################
-#     MULTIMEDIA KEYS
-#################################################################
-
-#################################################################
-#################################################################
-##################   DESKTOP SPECIFIC    ########################
-#################################################################
-#################################################################
-
-#################################################################
-# CTRL + ALT KEYS
-#################################################################
-
-#Picom Toggle
-ctrl + alt + o
-    ~/.config/leftwm/themes/current/picom/picom.sh
-
-#Lock Screen
-ctrl + alt + l
-    i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
-
-#Dunst
-ctrl + alt + shift + o
-    dunstctl rule sound toggle
-ctrl + alt + shift + p
-    dunstctl set-paused toggle
-ctrl + alt + shift + h
-    dunstctl history-pop
-ctrl + alt + shift + c
-    dunstctl close
-ctrl + alt + shift + a
-    dunstctl close-all
-
-#################################################################
-# SUPER + KEYS
-#################################################################
-
-#################################################################
-# SUPER KEYS
-#################################################################
-
-#################################################################
-# SUPER + SHIFT KEYS
-#################################################################
-
-#################################################################
-# SUPER + CONTROL KEYS
-#################################################################
-
-#################################################################
-# ALT KEYS
-#################################################################
-
-#################################################################
-# ALT + SHIFT KEYS
-#################################################################
-
-#################################################################
-# CTRL + ALT KEYS
-#################################################################
+alt + space
+    leftwm-command "ToggleScratchPad MainTerminal"
+super + b
+    polybar-msg cmd toggle
+super + comma
+    leftwm-command "PreviousLayout"
+super + period
+    leftwm-command "NextLayout"
+super + space
+    bash ~/.config/leftwm/themes/current/rofi/start.sh
+ctrl + space
+    leftwm-command "ToggleScratchPad Notepad"
+super + Up
+    leftwm-command "SwapScreens"
+super + shift + Up
+    leftwm-command "MoveWindowToNextWorkspace"
+super + Down
+    leftwm-command "SwapScreens"
+super + shift + Down
+    leftwm-command "MoveWindowToNextWorkspace"
+super + Left
+    leftwm-command "FocusWindowDown"
+super + shift + Left
+    leftwm-command "MoveWindowDown"
+super + Right
+    leftwm-command "FocusWindowUp"
+super + shift + Right
+    leftwm-command "MoveWindowUp"
