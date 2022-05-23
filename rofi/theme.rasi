@@ -1,0 +1,123 @@
+/* 
+ * Documentation: https://github.com/davatorium/rofi/blob/1.7.3/doc/rofi-theme.5.markdown 
+ */
+
+configuration{
+    lines:                      5;
+    columns:                    1;
+    show-icons:                 true;
+    disable-history:            false;
+    fullscreen:                 false;
+    hide-scrollbar:             true;
+    sidebar-mode:               false;
+    drun-display-format:        "{icon} {name}";
+    terminal:                   "alacritty";
+}
+
+* {
+    font:                       "SauceCodePro Nerd Font Semibold 11";
+    polardarkest:               #2e3440;
+    polardark:                  #3b4252;
+    polar:                      #434c5e;
+    polarlight:                 #4c566a;
+    snowdark:                   #d8dee9;
+    snow:                       #e5e9f0;
+    snowlight:                  #eceff4;
+    frostgreen:                 #8fbcbb;
+    frostcyan:                  #88c0d0;
+    frostblue:                  #81a1c1;
+    frostlight:                 #5e81ac;
+    aurorared:                  #bf616a;
+    auroraorange:               #d08770;
+    aurorayellow:               #ebcb8b;
+    auroragreen:                #a3be8c;
+    aurorapurple:               #b48ead;
+    background:                 #2e344055;
+    transparent:                #00000000;
+}
+
+element-text, element-icon , mode-switcher, textbox {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+window {
+	transparency:               "real";
+    background-color:           @polar;
+}
+
+mainbox {
+    background-color:           @transparent;
+    padding:                    0px;
+}
+
+inputbar {
+    background-color:           @transparent;
+}
+
+prompt {
+    background-color:           @frostgreen;
+    text-color:                 @polardark;
+    border:                     0;
+}
+
+textbox-prompt-colon {
+    expand:                     false;
+    str:                        ":";
+}
+
+entry {
+    text-color:                 @snow;
+    background-color:           @polardark;
+	placeholder:                "Search";
+    placeholder-color:          @snowlight;
+	blink:                      true;
+    vertical-align:             0;
+    horizontal-align:           0;
+}
+
+listview {
+    background-color:           @transparent;
+    cycle:                      false;
+    dynamic:                    true;
+    layout:                     vertical;
+    spacing:                    0;
+    reverse:                    false;
+    fixed-columns:              false;
+    scrollbar:                  false;
+    scrollbar-width:            0;
+}
+
+element {
+    background-color:           @transparent;
+    text-color:                 @snow;
+    orientation:                horizontal;
+}
+
+element-icon {
+    background-color:           @transparent;
+}
+
+element-text {
+    background-color:           @transparent;
+}
+
+element selected {
+    background-color:           @frostgreen;
+    text-color:                 @polardark;
+}
+
+button {
+    background-color:           @polardark;
+    text-color:                 @snow;
+}
+
+button selected {
+    background-color:           @frostgreen;
+    text-color:                 @polardark;
+}
+
+message{
+    background-color:           @transparent;
+    text-color:                 @snow;
+}
