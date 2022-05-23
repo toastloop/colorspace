@@ -35,8 +35,6 @@ super + shift + r
     leftwm-command "SoftReload"
 super + t
     leftwm-command "SetLayout MainAndVertStack"
-super + shift + t
-    bash ~/.config/leftwm/themes/current/rofi/file.sh
 super + y
     leftwm-command "SetLayout Monocle"
 super + u
@@ -57,6 +55,8 @@ super + shift + a
     alacritty
 super + shift + s
     io.gitlab.librewolf-community
+super + shift + d
+    bash ~/.config/leftwm/themes/current/rofi/file.sh
 super + f
     leftwm-command "ToggleFullScreen"
 super + shift + f
