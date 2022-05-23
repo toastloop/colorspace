@@ -1,76 +1,31 @@
-configuration {
-    show-icons:                     true;
-    disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
-}
+@import "theme.rasi"
 
-* {
-    font: "SauceCodePro Nerd Font Semibold 11";
-    foreground:                 #E4E4E4;
-    background-color:           #1c1b2255;
-    selected-foreground:        #E4E4E4;
-    selected-background:        #11112277;
-    separatorcolor:             #ff79c6;
-    bordercolor:                #ff79c6;
-    highlightcolor:             #8be9fd;
-    transparent:                #00000000;
-}
-
-#window {
-	transparency:                   "real";
-    background-color:               @background;
-    text-color:                     @foreground;
-	border:							0;
-	border-color:					@background;
+window {
     border-radius:                  8;
 	width:							300px;
     location:                       northeast;
     x-offset:                       -20;
-    y-offset:                       80;
+    y-offset:                       75;
 }
 
-#listview {
-    background-color:               @transparent;
+listview {
     padding:                        0px;
-    columns:                        1;
     lines:                          5;
     spacing:                        0px;
     cycle:                          true;
-    dynamic:                        true;
-    layout:                         vertical;
 }
 
-#mainbox {
+mainbox {
     children:                       [ listview ];
-    background-color:               @transparent;
 }
 
-#element {
-    background-color:               @transparent;
-    text-color:                     @foreground;
+element {
     orientation:                    horizontal;
     border-radius:                  8;
     padding:                        10px;
-    children: [element-icon, element-text];
+    children:                       [element-icon, element-text];
 }
-
-#element-text {
-    font: "SauceCodePro NF Medium 11";
-    background-color: @transparent;
-    text-color:       inherit;
-}
-
-#element-icon {
-    size: 0.9em;
-    background-color: @transparent;
-    text-color:       inherit;
-}
-
-#element.selected {
-    background-color:               @selected-background;
-    text-color:                     @selected-foreground;
+element.selected {
 	border:							0;
     border-radius:                  8;
 }
