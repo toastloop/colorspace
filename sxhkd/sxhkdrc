@@ -18,7 +18,7 @@ super + Escape
 super + grave
     bash ~/.config/leftwm/themes/current/rofi/power.sh
 super + shift + {1-9}
-    leftwm-command "SendWindowToTag {1-9}" 
+    ~/.config/leftwm/themes/current/leftwm/sendto.sh "{1-9}"
 super + {1-9}
     ~/.config/leftwm/themes/current/leftwm/goto.sh "{1-9}"
 super + Tab
