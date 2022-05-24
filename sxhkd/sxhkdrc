@@ -17,6 +17,8 @@ super + Escape
     xkill
 super + grave
     bash ~/.config/leftwm/themes/current/rofi/power.sh
+super + shift + grave
+    wal --theme base16-nord
 super + shift + {1-9}
     ~/.config/leftwm/themes/current/leftwm/sendto.sh "{1-9}"
 super + {1-9}
@@ -33,8 +35,6 @@ super + shift + minus
     xbacklight -dec 20 && notify-send "Backlight: $(xbacklight -get)"
 super + shift + plus
     xbacklight -inc 20 && notify-send "Backlight: $(xbacklight -get)"
-super + shift + equal
-    wal --theme base16-nord
 super + q
     leftwm-command "CloseWindow"
 super + shift + q
