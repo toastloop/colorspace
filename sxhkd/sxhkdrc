@@ -107,6 +107,8 @@ super + period
     leftwm-command "NextLayout"
 super + space
     bash ~/.config/leftwm/themes/current/rofi/start.sh
+super + slash
+    leftwm-command "ToggleSticky"
 ctrl + space
     leftwm-command "ToggleScratchPad Notepad"
 super + Up
