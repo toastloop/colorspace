@@ -43,6 +43,10 @@ super + w
     leftwm-command "SwapScreens"
 super + shift + w
     leftwm-command "MoveToLastWorkspace"
+super + e
+    pcmanfm
+super + r
+    bash ~/.config/leftwm/themes/current/rofi/run.sh
 super + shift + r
     leftwm-command "SoftReload"
 super + t
@@ -63,16 +67,18 @@ super + bracketright
     dunstctl close
 super + backslash
     dunstctl close-all
-super + shift + a
+super + a
     alacritty
-super + shift + s
+super + s
     io.gitlab.librewolf-community
-super + shift + d
+super + d
     bash ~/.config/leftwm/themes/current/rofi/file.sh
 super + f
     leftwm-command "ToggleFullScreen"
 super + shift + f
     leftwm-command "ToggleFloating"
+super + g
+    code
 super + h
     leftwm-command "FocusWorkspacePrevious"
 super + shift + h
@@ -91,16 +97,26 @@ super + l
     leftwm-command "FocusWorkspaceNext"
 super + shift + l
     leftwm-command "MoveWindowToNextWorkspace"
-super + alt + l
+super + semicolon
     i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
+super + apostrophe
+    com.spotify.Client
+super + z
+    com.discordapp.Discord
+super + x
+    bash ~/.config/leftwm/themes/current/rofi/start.sh
 super + shift + x
     loginctl kill-session $XDG_SESSION_ID
-super + shift + v
+super + v
     pavucontrol
 alt + space
     leftwm-command "ToggleScratchPad MainTerminal"
 super + b
     polybar-msg cmd toggle
+super + n
+    playerctl play
+super + m
+    playerctl pause
 super + comma
     leftwm-command "PreviousLayout"
 super + period
