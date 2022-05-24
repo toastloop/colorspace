@@ -30,9 +30,9 @@ alt + Tab
 alt + shift + Tab
     leftwm-command "FocusPreviousTag"
 super + shift + minus
-    xbacklight -dec 20 && notify-send "$(xbacklight -get)"
+    xbacklight -dec 20 && notify-send "Backlight: $(xbacklight -get)"
 super + shift + plus
-    xbacklight -inc 20 && notify-send "$(xbacklight -get)"
+    xbacklight -inc 20 && notify-send "Backlight: $(xbacklight -get)"
 super + shift + equal
     wal --theme base16-nord
 super + q
