@@ -4,11 +4,11 @@ THEME="$SCRIPTPATH/power.rasi"
 rofi_command="rofi -no-config -theme $THEME"
 
 # Options
-shutdown="Shutdown"
-reboot="Restart"
-lock="Lock"
-suspend="Suspend"
-logout="Logout"
+shutdown="  Shutdown"
+reboot="  Restart"
+lock="  Lock"
+suspend="  Suspend"
+logout="﫼  Logout"
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
