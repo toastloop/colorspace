@@ -4,9 +4,9 @@
 # https://wiki.linuxquestions.org/wiki/List_of_keysyms
 
 Print
-    flameshot gui --path ~/Pictures
+    flameshot gui --clipboard --path ~/Pictures
 shift + Print
-    flameshot full --path ~/Pictures
+    flameshot full --clipboard --path ~/Pictures
 XF86AudioLowerVolume
     pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioRaiseVolume
