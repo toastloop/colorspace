@@ -56,7 +56,7 @@ inputbar {
 }
 
 prompt {
-    background-color:           @frostgreen;
+    background-color:           @aurorapurple;
     text-color:                 @polardark;
     border:                     0;
 }
@@ -68,7 +68,7 @@ textbox-prompt-colon {
 
 entry {
     text-color:                 @snow;
-    background-color:           @polardark;
+    background-color:           @polarlight;
 	placeholder:                "Search";
     placeholder-color:          @snowlight;
 	blink:                      true;
@@ -103,17 +103,17 @@ element-text {
 }
 
 element selected {
-    background-color:           @frostgreen;
+    background-color:           @frostblue;
     text-color:                 @polardark;
 }
 
 button {
-    background-color:           @polardark;
+    background-color:           @polarlight;
     text-color:                 @snow;
 }
 
 button selected {
-    background-color:           @frostgreen;
+    background-color:           @auroragreen;
     text-color:                 @polardark;
 }
 
