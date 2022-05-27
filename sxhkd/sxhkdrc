@@ -14,15 +14,13 @@ XF86AudioRaiseVolume
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 super + Escape
-    xkill
-super + grave
     bash ~/.config/leftwm/themes/current/rofi/power.sh
-super + shift + grave
-    wal --theme base16-nord
-super + shift + {1-9}
-    ~/.config/leftwm/themes/current/leftwm/sendto.sh "{1-9}"
+super + grave
+    xkill
 super + {1-9}
     ~/.config/leftwm/themes/current/leftwm/goto.sh "{1-9}"
+super + shift + {1-9}
+    ~/.config/leftwm/themes/current/leftwm/sendto.sh "{1-9}"
 super + Tab
     leftwm-command "FocusNextTag"
 super + shift + Tab
@@ -101,6 +99,8 @@ super + semicolon
     i3lock-fancy-dualmonitor  -f Noto-Mono-Nerd-Font-Complete
 super + apostrophe
     com.spotify.Client
+super + Return
+    alacritty
 super + z
     com.discordapp.Discord
 super + x
