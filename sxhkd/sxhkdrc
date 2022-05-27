@@ -114,9 +114,9 @@ alt + space
 super + b
     polybar-msg cmd toggle
 super + n
-    playerctl play
+    playerctl play-pause
 super + m
-    playerctl pause
+    playerctl stop
 super + comma
     leftwm-command "PreviousLayout"
 super + period
