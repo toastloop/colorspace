@@ -148,6 +148,7 @@ timeout = 20
 #+BEGIN_SRC ini :tangle dunstrc
 [sound]
     summary = "*"
+    script = ~/.config/leftwm/themes/current/dunst/sound.sh
 #+END_SRC
 
 * Helper Programs
