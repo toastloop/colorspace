@@ -1,0 +1,55 @@
+#+TITLE: Down
+#+DESCRIPTION: The down script for ColorSpace
+#+AUTHOR: Matt Knowlton (toastlooop)
+#+PROPERTY: header-args :tangle down :shebang "#!/bin/bash"
+#+DATE: Thu Jun  9 21:22:11 2022
+#+EMAIL: noreply@toastloop.com
+
+This file contains the configuration and readme for the down script of ColorSpace. The generated script "down" will automatically be called by leftwm whenever a different theme is applied or the user logs out.
+
+* Table of Contents :toc:
+- [[#export][Export]]
+- [[#set-background][Set Background]]
+- [[#unload-the-theme][Unload the Theme]]
+- [[#end-applications][End Applications]]
+
+* Export
+
+Exports the currently running script path, used in cases we need to know where in the directory the script is running.
+
+#+begin_src shell
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+#+END_SRC
+
+* Set Background
+
+Sets the background to a blank image, so it doesn't conflict with another theme in case they don't set a background.
+
+#+begin_src shell
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-scale $SCRIPTPATH/leftwm/down.jpg
+fi
+#+END_SRC
+
+* Unload the Theme
+
+Sends an UnloadTheme command to the leftwm command pipe.
+
+#+begin_src shell
+echo "UnloadTheme" > $XDG_RUNTIME_DIR/leftwm/command-0.pipe
+#+END_SRC
+
+* End Applications
+
+Kills all applications opened by the theme so we don't have any dangling applications after the theme is unloaded.
+
+#+begin_src shell
+pkill copyq
+pkill flameshot
+pkill dunst
+pkill polybar
+pkill picom
+pkill sxhkd
+pkill nm-applet
+pkill streamdeck
+#+END_SRC
