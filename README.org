@@ -1,0 +1,93 @@
+#+TITLE: 💻 ColorSpace
+#+DESCRIPTION: README for ColorSpace
+#+AUTHOR: Matt Knowlton (toastlooop)
+#+DATE: Thu Jun  9 21:22:11 2022
+#+EMAIL: noreply@toastloop.com
+
+Nord and powerline styled theme for LeftWM using mostly Rust software.
+
+* Table of Contents :toc:
+  - [[#screenshots][Screenshots]]
+  - [[#-features][💕 Features]]
+  - [[#️-dependencies][⚒️ Dependencies]]
+  - [[#️-install][⬇️ Install]]
+  - [[#-credits][📝 Credits]]
+
+** Screenshots
+
+#+CAPTION: Screenshot 1 (Background)
+[[https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop3.jpg]]
+
+#+CAPTION: Screenshot 2 (Spotifyd/Sptlrx/Cava/Alacritty)
+[[https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop.jpg]]
+
+#+CAPTION: Screenshot 3 (Firefox)
+[[https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop2.jpg]]
+
+** 💕 Features
+
+- Powerline polybar configuration
+- Rounded Corners
+- Kwase Blur
+- Spotify Currently Playing
+- Customized Rofi Launcher
+- Built with Rust first
+
+** ⚒️ Dependencies
+
+(Required)
+
+- [[https://www.github.com/leftwm/leftwm][LeftWM]]
+- [[https://github.com/polybar/polybar][Polybar]]
+- [[https://github.com/davatorium/rofi][Rofi]]
+- [[https://github.com/alacritty/alacritty][Alacritty]]
+- [[https://github.com/ibhagwan/picom][Picom-ibhagwan]]
+- [[https://github.com/dylanaraps/pywal][Pywal]]
+- [[https://github.com/derf/feh][Feh]]
+- [[https://github.com/baskerville/sxhkd][Sxhkd]]
+- [[https://aur.archlinux.org/packages/i3lock-fancy-dualmonitors-git][i3lock-fancy-dualmonitors]]
+- [[https://github.com/altdesktop/playerctl][playerctl]]
+- [[https://www.nerdfonts.com/][NerdFonts]]
+
+(Optional)
+
+- [[https://fishshell.com/][Fish Shell]]
+- [[https://starship.rs/][Starship Prompt]]
+- [[https://github.com/macchina-cli/macchina][Macchina]]
+- [[https://github.com/Rigellute/spotify-tui][Spotify-tui]] (w/ [[https://github.com/Spotifyd/spotifyd][Spotifyd]])
+- [[https://github.com/raitonoberu/sptlrx][Sptlrx]]
+- [[https://github.com/karlstav/cava][Cava]]
+- [[https://github.com/EliverLara/Nordic][Nordic GTK Theme]]
+
+** ⬇️ Install
+
+1. Run the following command (will also work with `yay` or another aur helper)
+
+    ```bash
+    #+BEGIN_SRC shell
+    paru --needed -S leftwm alacritty rofi feh sxhkd python-pywal nerd-fonts-noto-sans-mono i3lock-fancy-dualmonitors playerctl
+    #+END_SRC
+
+2. Add the following to `~/.config/leftwm/themes.conf`
+
+   #+BEGIN_SRC ini
+    [[repos]]
+    url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
+    name = "toastloop"
+    definitions_version = 0
+#+END_SRC
+
+3. Finally, run
+
+    #+BEGIN_SRC shell
+    leftwm-theme update && leftwm-theme apply ColorSpace
+    #+END_SRC
+
+** 📝 Credits
+
+- Based on the [[https://github.com/AnthonyMichaelTDM/leftwm-theme-main][leftwm-theme-main]] by [[https://github.com/AnthonyMichaelTDM/][AnthonyMichael]].
+- [[https://github.com/linuxdotexe/nordic-wallpapers/blob/master/wallpapers/ign_outer_space.png][Wallpaper]] from the [[https://github.com/linuxdotexe/nordic-wallpapers][nordic-wallpapers]] collection by [[https://github.com/linuxdotexe][Sai Nivas]].
+- [[https://github.com/ishaan26/config_files/blob/master/linux/.config/rofi/themes/drun.rasi][Rofi theme]] from the [[https://github.com/ishaan26/config_files][config files]] of [[(https://github.com/ishaan26/).][ishaan26]].
+- README inspired by the [[https://github.com/Mofiqul/awesome-shell/blob/main/README.md][README]] of [[https://github.com/Mofiqul/awesome-shell/][awesome-shell]] by [[https://github.com/Mofiqul][Mofiqul]].
+
+*** 🏳️‍🌈 Proud LGBT Creator
