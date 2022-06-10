@@ -7,13 +7,13 @@
 Nord and powerline styled theme for LeftWM using mostly Rust software.
 
 * Table of Contents :toc:
-  - [[#screenshots][Screenshots]]
+  - [[#screenshots][:camera: Screenshots]]
   - [[#-features][💕 Features]]
   - [[#️-dependencies][⚒️ Dependencies]]
   - [[#️-install][⬇️ Install]]
   - [[#-credits][📝 Credits]]
 
-** Screenshots
+** :camera: Screenshots
 
 #+CAPTION: Screenshot 1 (Background)
 [[https://raw.githubusercontent.com/toastloop/colorspace/master/assets/desktop3.jpg]]
