@@ -1,0 +1,165 @@
+#+TITLE: Dunst
+#+DESCRIPTION: Scripts relating to Dunst
+#+AUTHOR: Matt Knowlton (toastlooop)
+#+DATE: Thu Jun  9 21:22:11 2022
+#+EMAIL: noreply@toastloop.com
+
+A program that handles notifications on the desktop.
+
+* Table of Contents :toc:
+- [[#dunstrc][Dunstrc]]
+  - [[#formatting][Formatting]]
+  - [[#messages][Messages]]
+  - [[#positionsize][Position/Size]]
+  - [[#notification-behavoir][Notification Behavoir]]
+  - [[#height-and-padding][Height and Padding]]
+  - [[#external-programs][External Programs]]
+  - [[#icons][Icons]]
+  - [[#notification-type-appearance][Notification Type Appearance]]
+  - [[#plugins][Plugins]]
+- [[#helper-programs][Helper Programs]]
+  - [[#soundsh][sound.sh]]
+
+* Dunstrc
+
+** Formatting
+
+Sets the font, whether pongo markup is allowed, and the format for the alert. Formats the message with a bold title and then a new line with the message.
+
+#+BEGIN_SRC ini :tangle dunstrc
+ [global]
+font = "NotoSansMono 11"
+markup = yes
+format = "<b>%s</b>\n%b"
+#+END_SRC
+
+** Messages
+
+Sort specifies whether the notifications are sorted by priority. Unsure about indicate hidden function. Alignment specifies the text alignment. Unsure about the show age threshold. Word-wrap wraps the text of the message if it extends past the width of the notification. Stack duplicate  notifications yes or no. Hide duplicate count hides the count of the duplicate messages.
+
+#+BEGIN_SRC ini :tangle dunstrc
+sort = no
+indicate_hidden = yes
+alignment = center
+show_age_threshold = -1
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = no
+hide_duplicate_count = no
+#+END_SRC
+
+** Position/Size
+
+Specifies the (minimum and maximum) of the width and height of the notification. Specifies the offset from the origin of the notifications. Specifies the origin of the notification (bottom/center/top-right/center/left).
+
+#+BEGIN_SRC ini :tangle dunstrc
+width = "(250,350)"
+height = "(0,50)"
+offset = "20x40"
+origin = "bottom-right"
+shrink = no
+#+END_SRC
+
+** Notification Behavoir
+
+Specifies transparency of the notification, the threshold to continue sending notification, which monitor the notifications appear on, whether to follow the mouse or just appear on the specified monitor, sticky history keeps the notifications in history, specify the length of history kept, and whether to show indicators of the notification.
+
+#+BEGIN_SRC ini :tangle dunstrc
+transparency = 20
+idle_threshold = 360
+monitor = 0
+follow = none
+sticky_history = yes
+history_length = 15
+show_indicators = no
+#+END_SRC
+
+** Height and Padding
+
+Specifies line height for each line of the notification, separator height of the notifications, padding around the notifications, horizontal padding of the notification.
+
+#+BEGIN_SRC ini :tangle dunstrc
+line_height = 3
+separator_height = 0
+padding = 6
+horizontal_padding = 6
+separator_color = "#5e81ac"
+#+END_SRC
+
+** External Programs
+
+Specifies the path for a dmenu (or clone like rofi) and browser (such as firefox).
+
+#+BEGIN_SRC ini :tangle dunstrc
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/firefox -new-tab
+#+END_SRC
+
+
+** Icons
+
+Position of the icon, maximum icon size, the path to a custom icon set, the width of the frame (border) around the notification and the color of the frame.
+
+#+BEGIN_SRC ini :tangle dunstrc
+icon_position = left
+max_icon_size = 64
+icon_path = /usr/share/icons/Nordzy-dark/mimes/22/:/usr/share/icons/Nordzy-dark/status/22/:/usr/share/icons/Nordzy-dark/devices/22/:/usr/share/icons/Nordzy-dark/status/22/:/usr/share/icons/Nordzy-dark/emblems/22/:/usr/share/icons/Nordzy-dark/actions/22/:/usr/share/icons/Nordzy-dark/apps/scalable/
+frame_width = 0
+frame_color = "#88c0d0"
+#+END_SRC
+
+
+** Notification Type Appearance
+
+*** Low
+
+#+BEGIN_SRC ini :tangle dunstrc
+[urgency_low]
+frame_color = "#88c0d0"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 10
+#+END_SRC
+
+*** Normal
+
+#+BEGIN_SRC ini :tangle dunstrc
+[urgency_normal]
+frame_color = "#5e81ac"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 15
+#+END_SRC
+
+*** Critical
+
+#+BEGIN_SRC ini :tangle dunstrc
+[urgency_critical]
+frame_color = "#bf616a"
+foreground = "#ffffffff"
+background = "#1c1b2255"
+timeout = 20
+#+END_SRC
+
+** Plugins
+
+*** Sound
+
+#+BEGIN_SRC ini :tangle dunstrc
+[sound]
+    summary = "*"
+#+END_SRC
+
+* Helper Programs
+
+Below are the scripts that are used to help with Dunst.
+
+** sound.sh
+
+When called plays the bell.wav to inform the user a notification appears.
+
+#+BEGIN_SRC shell :tangle sound.sh :shebang "#!/bin/bash"
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+aplay $SCRIPTPATH/bell.wav
+#+END_SRC
