@@ -8,7 +8,6 @@
 This file contains the configuration and readme for the up script of ColorSpace.
 
 * Table of Contents :toc:
-- [[#up][Up]]
 - [[#export][Export]]
 - [[#down-script][Down Script]]
 - [[#software-auto-load][Software Auto load]]
@@ -25,10 +24,6 @@ This file contains the configuration and readme for the up script of ColorSpace.
   - [[#streamdeck][StreamDeck]]
 - [[#load][Load]]
 - [[#polybar][Polybar]]
-
-* Up
-
-This file contains the configuration and readme for the up script of ColorSpace.
 
 * Export
 
