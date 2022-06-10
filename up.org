@@ -1,7 +1,7 @@
 #+TITLE: Up
 #+DESCRIPTION: The up script for ColorSpace
 #+AUTHOR: Matt Knowlton (toastlooop)
-#+PROPERTY: header-args :tangle up
+#+PROPERTY: header-args :tangle up :shebang "#!/bin/bash"
 #+DATE: Thu Jun  9 21:22:11 2022
 #+EMAIL: noreply@toastloop.com
 
@@ -30,7 +30,6 @@ This file contains the configuration and readme for the up script of ColorSpace.
 Export the current running  directory of the script.
 
 #+begin_src shell
-#!/bin/bash
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 #+end_src
 
