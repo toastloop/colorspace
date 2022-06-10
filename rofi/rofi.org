@@ -1,0 +1,111 @@
+#+TITLE: Rofi
+#+DESCRIPTION: Helper scripts for rofi
+#+AUTHOR: Matt Knowlton (toastlooop)
+#+DATE: Thu Jun  9 21:22:11 2022
+#+EMAIL: noreply@toastloop.com
+
+A collection of scripts to launch various programs and files using the Rofi launcher.
+
+* Table of Contents :toc:
+  - [[#export][Export]]
+  - [[#themes][Themes]]
+  - [[#start-menu-drun][Start Menu (drun)]]
+  - [[#run-menu-run][Run Menu (run)]]
+  - [[#file-browser-filebrowser][File Browser (filebrowser)]]
+  - [[#power-menu-custom][Power Menu (custom)]]
+
+** Export
+
+Exports the current working directory of the script
+
+#+NAME: exportscript
+#+BEGIN_SRC shell :tangle no
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+#+END_SRC
+
+** Themes
+
+*** Start Themes
+
+Theme for the start menu including the start, run, and file browser.
+
+#+NAME: starttheme
+#+BEGIN_SRC shell :tangle no
+THEME="$SCRIPTPATH/start.rasi"
+#+END_SRC
+
+*** Power Theme
+
+Theme for the power menu
+
+#+NAME: powertheme
+#+BEGIN_SRC shell :tangle no
+THEME="$SCRIPTPATH/power.rasi"
+#+END_SRC
+
+** Start Menu (drun)
+
+Lists available applications using the .desktop files.
+
+#+BEGIN_SRC shell :tangle start.sh :shebang #!/bin/sh :noweb yes
+<<exportscript>>
+<<starttheme>>
+rofi -no-config -show drun -theme "$THEME"
+#+END_SRC
+
+** Run Menu (run)
+
+Lists all terminal commands on the system.
+
+#+BEGIN_SRC shell :tangle run.sh :shebang #!/bin/sh :noweb yes
+<<exportscript>>
+<<starttheme>>
+rofi -no-config -show run -theme "$THEME"
+#+END_SRC
+
+** File Browser (filebrowser)
+
+Lists files from the user's directory.
+
+#+BEGIN_SRC shell :tangle file.sh :shebang #!/bin/sh :noweb yes
+<<exportscript>>
+<<starttheme>>
+rofi -no-config -show filebrowser -theme "$THEME"
+#+END_SRC
+
+** Power Menu (custom)
+
+Lists power options including lock, suspend, logout, restart, and shutdown.
+
+#+BEGIN_SRC shell :tangle power.sh :shebang #!/bin/sh :noweb yes
+<<exportscript>>
+<<powertheme>>
+rofi_command="rofi -no-config -theme $THEME"
+
+# Options
+shutdown="  Shutdown"
+reboot="  Restart"
+lock="  Lock"
+suspend="  Suspend"
+logout="﫼  Logout"
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
+case $chosen in
+    $shutdown)
+        systemctl poweroff
+        ;;
+    $reboot)
+		systemctl reboot
+        ;;
+    $lock)
+        i3lock-fancy-dualmonitor -f Noto-Mono-Nerd-Font-Complete
+        ;;
+    $suspend)
+		systemctl suspend
+        ;;
+    $logout)
+        loginctl kill-session $XDG_SESSION_ID
+        ;;
+esac
+#+END_SRC

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 THEME="$SCRIPTPATH/power.rasi"
 rofi_command="rofi -no-config -theme $THEME"
