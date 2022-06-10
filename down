@@ -16,3 +16,4 @@ pkill polybar
 pkill picom
 pkill sxhkd
 pkill nm-applet
+pkill streamdeck
