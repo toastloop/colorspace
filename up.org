@@ -13,7 +13,6 @@ This file contains the configuration and readme for the up script of ColorSpace.
 - [[#software-auto-load][Software Auto load]]
   - [[#xorg-display][Xorg Display]]
   - [[#feh-background][Feh Background]]
-  - [[#conky][Conky]]
   - [[#pywal-theme][Pywal Theme]]
   - [[#sxhkd][Sxhkd]]
   - [[#network-manager-applet][Network Manager Applet]]
@@ -66,16 +65,6 @@ elif [ -x "$(command -v feh)" ]; then
   feh --bg-scale $SCRIPTPATH/backgrounds/ign_outer_space.png
 fi
 #+end_src
-
-** Conky
-
-#+begin_src shell
-if [ -f $SCRIPTPATH/conky/start.sh ]; then
-  $SCRIPTPATH/conky/start.sh
-fi
-#+end_src
-
-#+RESULTS:
 
 ** Pywal Theme
 

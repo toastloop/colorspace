@@ -17,10 +17,6 @@ elif [ -x "$(command -v feh)" ]; then
   feh --bg-scale $SCRIPTPATH/backgrounds/ign_outer_space.png
 fi
 
-if [ -f $SCRIPTPATH/conky/start.sh ]; then
-  $SCRIPTPATH/conky/start.sh
-fi
-
 if [ -x "$(command -v wal)" ]; then
   wal --theme base16-nord
 fi
