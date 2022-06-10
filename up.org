@@ -1,0 +1,169 @@
+#+TITLE: Up
+#+DESCRIPTION: The up script for ColorSpace
+#+AUTHOR: Matt Knowlton (toastlooop)
+#+PROPERTY: header-args :tangle up
+#+DATE: Thu Jun  9 21:22:11 2022
+#+EMAIL: noreply@toastloop.com
+
+* Table of Contents :toc:
+- [[#up][Up]]
+- [[#export][Export]]
+- [[#down-script][Down Script]]
+- [[#software-auto-load][Software Auto load]]
+  - [[#xorg-display][Xorg Display]]
+  - [[#feh-background][Feh Background]]
+  - [[#conky][Conky]]
+  - [[#pywal-theme][Pywal Theme]]
+  - [[#sxhkd][Sxhkd]]
+  - [[#network-manager-applet][Network Manager Applet]]
+  - [[#copyq][CopyQ]]
+  - [[#flameshot][Flameshot]]
+  - [[#picom][Picom]]
+  - [[#dunst][Dunst]]
+  - [[#streamdeck][StreamDeck]]
+- [[#load][Load]]
+- [[#polybar][Polybar]]
+
+* Up
+
+This file contains the configuration and readme for the up script of ColorSpace.
+
+* Export
+
+Export the current running  directory of the script.
+
+#+begin_src shell
+#!/bin/bash
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+#+end_src
+
+* Down Script
+
+Checks if the down script was created by leftwm and executes the script and then removes it. It will then link the down script for this theme to the leftwm-theme down script.
+
+#+begin_src shell
+if [ -f "/tmp/leftwm-theme-down" ]; then
+    /tmp/leftwm-theme-down
+    rm /tmp/leftwm-theme-down
+fi
+ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
+#+end_src
+
+* Software Auto load
+
+Auto loads software necessary for the theme to function.
+
+** Xorg Display
+
+#+begin_src shell
+if [ -f ~/display.sh ]; then
+  ~/display.sh
+fi
+#+end_src
+
+** Feh Background
+
+#+begin_src shell
+if [ -f ~/.fehbg ]; then
+  ~/.fehbg
+elif [ -x "$(command -v feh)" ]; then
+  feh --bg-scale $SCRIPTPATH/backgrounds/ign_outer_space.png
+fi
+#+end_src
+
+** Conky
+
+#+begin_src shell
+if [ -f $SCRIPTPATH/conky/start.sh ]; then
+  $SCRIPTPATH/conky/start.sh
+fi
+#+end_src
+
+#+RESULTS:
+
+** Pywal Theme
+
+#+begin_src shell
+if [ -x "$(command -v wal)" ]; then
+  wal --theme base16-nord
+fi
+#+end_src
+
+** Sxhkd
+
+#+begin_src shell
+if [ -x "$(command -v sxhkd)" ]; then
+  sxhkd -c  $SCRIPTPATH/sxhkd/sxhkdrc &
+fi
+#+end_src
+
+** Network Manager Applet
+
+#+begin_src shell
+if [ -x "$(command -v nm-applet)" ]; then
+  nm-applet &
+fi
+#+end_src
+
+** CopyQ
+
+#+begin_src shell
+if [ -x "$(command -v copyq)" ]; then
+  copyq &
+fi
+#+end_src
+
+** Flameshot
+
+#+begin_src shell
+if [ -x "$(command -v flameshot)" ]; then
+  flameshot &> /dev/null &
+fi
+#+end_src
+
+** Picom
+
+#+begin_src shell
+if [ -x "$(command -v picom)" ]; then
+  picom --config "$SCRIPTPATH"/picom/picom.conf &> /dev/null &
+fi
+#+end_src
+
+** Dunst
+
+#+begin_src shell
+if [ -x "$(command -v dunst)" ]; then
+  dunst -config "$SCRIPTPATH"/dunst/dunstrc &> /dev/null &
+fi
+#+end_src
+
+** StreamDeck
+
+#+begin_src shell
+if [ -x "$(command -v streamdeck)" ]; then
+  streamdeck --no-ui &> /dev/null &
+fi
+#+end_src
+
+* Load
+
+Sends the theme.toml to the leftwm command pipe.
+
+#+begin_src shell
+echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/command-0.pipe
+#+end_src
+
+* Polybar
+
+Loops through each monitor and creates a polybar for the given monitor.
+
+#+begin_src shell
+index=0
+monitors=($(polybar -m | sed s/:.*//))
+leftwm-state -q -n -t "$SCRIPTPATH"/leftwm/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
+do
+  barname="mainbar$index"
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
+  let index=index+1
+done
+#+end_src
