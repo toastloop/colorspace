@@ -5,6 +5,8 @@
 #+DATE: Thu Jun  9 21:22:11 2022
 #+EMAIL: noreply@toastloop.com
 
+This file contains the configuration and readme for the up script of ColorSpace.
+
 * Table of Contents :toc:
 - [[#up][Up]]
 - [[#export][Export]]
