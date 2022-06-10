@@ -108,7 +108,7 @@ super + x
 super + shift + x
     loginctl kill-session $XDG_SESSION_ID
 super + v
-    pavucontrol
+    emacsclient -c
 alt + space
     leftwm-command "ToggleScratchPad MainTerminal"
 super + b
