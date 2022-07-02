@@ -1,0 +1,5 @@
+[[repos]]
+url = "https://raw.githubusercontent.com/toastloop/themes/master/known.toml"
+name = "toastloop"
+definitions_version = 0
+themes = []
